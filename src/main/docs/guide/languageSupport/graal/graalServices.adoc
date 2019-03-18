@@ -25,7 +25,7 @@ To build your native image using Docker simply run:
 $ docker build . -t hello-world
 $ docker run --network=host hello-world # <1>
 ----
-<1> Start the Docker container with `--network=host` makes the application uses the same network as the host so all ports are exposed automatically without needing to map them manually
+<1> Start the Docker container with `--network=host` makes the application uses the same network as the host so all ports are exposed automatically without needing to map them manually. Note that the option is not supported on Mac OS X or Windows. On those platforms, use `-p8080:8080` to set up port forwarding manually.
 
 Or use the provided script:
 
